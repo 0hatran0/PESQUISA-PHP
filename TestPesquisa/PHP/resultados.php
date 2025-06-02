@@ -25,7 +25,9 @@ if (empty($busca)) {
 $termo = $conexao->real_escape_string($busca);
 
 // Consulta com LIKE para busca parcial
-$sql = "SELECT * FROM produtos WHERE marca LIKE '%$termo%'";
+$sql = "SELECT * FROM produtos WHERE marca LIKE '%$busca%'
+        OR categoria LIKE '%$busca%'
+        OR sexo LIKE '%$busca%'";
 
 $resultado = $conexao->query($sql) or die($conexao->error);
 
