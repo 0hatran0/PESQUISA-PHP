@@ -48,7 +48,8 @@
             id INT AUTO_INCREMENT PRIMARY KEY,
             categoria VARCHAR(100) NOT NULL,
             marca VARCHAR(100) NOT NULL,
-            sexo ENUM('masculino', 'feminino', 'unissex') NOT NULL";
+            sexo ENUM('masculino', 'feminino', 'unissex') NOT NULL
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8";
    $conexao->query($sql) or exit($conexao->error);
    }
 
